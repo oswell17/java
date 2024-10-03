@@ -1,0 +1,49 @@
+
+package com.mycompany.dingson_queue;
+
+import java.util.*;
+
+public class Dingson_queue {
+
+    public static void main(String[] args) {
+        
+         Movie();
+    }
+    static void Movie(){
+        Scanner OS = new Scanner(System.in);
+        Queue<String> M = new LinkedList<>();
+        Queue<String> S = new LinkedList<>();
+        
+        System.out.print("How many movies: ");
+        int M1 = OS.nextInt();
+        
+        System.out.print("How many snacks: ");
+        int S1 = OS.nextInt();
+        
+        for(int i = 1; i < M1 + 1; i++){
+            System.out.print("Enter movie " + i + " of " + M1 + ": ");
+            String M2 = OS.next();
+            OS.nextLine();
+            M.add(M2);
+        }
+         for(int i = 1; i < S1 + 1; i++){
+            System.out.print("Enter snacks " + i + " of " + S1 + ": ");
+            String S2 = OS.next();
+            OS.nextLine();
+            S.add(S2);
+        }
+         System.out.println("Movies to Watch "+ M);
+         System.out.println("Snack to Eat " + S);
+       
+      
+        
+         for(int i = 1; i < S1+1; i++){
+           System.out.print("Press S to finish a snacks: " + S);
+            S.remove();
+             OS.nextLine();
+            
+        }
+         System.out.println("no more snack");
+         Movie();
+    }
+    
